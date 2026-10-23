@@ -1,0 +1,30 @@
+/* Monolog grain: the observed 400px transparent noise tile, at native scale.
+   Opacity is carried by the PNG alpha (18/255), not by a screen/multiply layer. */
+.grain{
+  position:fixed;
+  inset:-50% 0 0 -50%;
+  width:200%;
+  height:200vh;
+  z-index:2147483647;
+  pointer-events:none;
+  opacity:1;
+  mix-blend-mode:normal;
+  background-image:url('assets/film-grain.png');
+  background-position:0 0;
+  background-repeat:repeat;
+  background-size:auto;
+  background-attachment:fixed;
+  will-change:transform;
+  animation:starlight-grain .5s steps(6) infinite;
+}
+@keyframes starlight-grain{
+  0%,100%{transform:translate(0,0)}
+  17%{transform:translate(-5%,-10%)}
+  33%{transform:translate(3%,-15%)}
+  50%{transform:translate(12%,9%)}
+  67%{transform:translate(9%,4%)}
+  83%{transform:translate(-1%,7%)}
+}
+body.no-grain .grain{opacity:0;animation:none;will-change:auto}
+body.reduced .grain{animation:none;transform:none;will-change:auto}
+@media(prefers-reduced-motion:reduce){.grain{animation:none;transform:none;will-change:auto}}

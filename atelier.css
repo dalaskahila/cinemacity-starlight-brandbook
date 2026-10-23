@@ -1,0 +1,35 @@
+/* Transparent generated product concepts; original vector signatures remain separate. */
+.generated-atelier{left:45%;width:51%;top:15%;height:69%;isolation:isolate}
+.generated-atelier figure{position:absolute;margin:0;background:transparent;border:0;box-shadow:none}
+.generated-product{width:100%;height:auto}
+.popcorn-piece{left:43%;top:-2%;width:53%;z-index:2;will-change:transform}
+.product-wordmark{position:absolute;left:18%;top:42%;width:54%;height:auto;transform:rotate(2deg)}
+.stationery-piece{left:-9%;top:39%;width:94%;z-index:3;will-change:transform}
+.ticket-identity{position:absolute;left:57.5%;top:48.5%;width:39%;transform:translate(-50%,-50%) rotate(-13.4deg);color:#ffe49f;text-align:center}
+.ticket-identity>img{width:62%;height:auto;margin:0 auto 10px}
+.ticket-identity p{font:clamp(15px,1.8vw,27px)/1.12 Bodoni,Georgia,serif;letter-spacing:-.025em;white-space:nowrap}
+.atelier-seal{left:12%;top:13%;width:15%;aspect-ratio:1;display:grid;place-items:center;z-index:1}
+.atelier-seal span{position:absolute;inset:0;border:1px solid var(--edge);border-radius:50%;outline:1px solid var(--edge);outline-offset:8px}
+.atelier-seal img{position:absolute;height:72%;width:auto}
+.atelier-captions{display:none}
+.atelier-captions i{font-style:normal;color:var(--heading);font-size:18px}
+@media(min-width:1600px){.ticket-identity p{font-size:30px}.atelier-captions{font-size:10px}}
+@media(max-width:760px){
+ .generated-atelier{left:5%;width:90%;top:46%;height:36%}
+ .popcorn-piece{left:44%;top:-8%;width:53%}
+ .stationery-piece{left:-8%;top:32%;width:94%}
+ .ticket-identity>img{margin-bottom:5px}
+ .ticket-identity p{font-size:12px}
+ .atelier-seal{left:13%;top:6%;width:16%}
+ .atelier-captions{bottom:-6%;font-size:6px;letter-spacing:.08em}
+ .atelier-captions i{font-size:13px}
+}
+@media(max-width:760px) and (max-height:700px){
+ .generated-atelier{top:47%;height:34%;left:9%;width:82%}
+ .popcorn-piece{top:-6%;width:48%;left:48%}
+ .stationery-piece{top:28%;width:91%;left:-4%}
+ .ticket-identity p{font-size:11px}
+ .atelier-captions{bottom:-4%}
+}
+@media(prefers-reduced-motion:reduce){.popcorn-piece,.stationery-piece{will-change:auto}}
+.reduced .popcorn-piece,.reduced .stationery-piece{will-change:auto}
