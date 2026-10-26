@@ -1,0 +1,28 @@
+/* V10: additive background layers only; foreground composition is unchanged. */
+.scene-backdrop{position:absolute;inset:0;z-index:-2;overflow:hidden;pointer-events:none;--scene-tint:241,233,220;--scene-drift-duration:26s}
+.scene-backdrop>img{position:absolute;inset:-4%;width:108%;height:108%;object-fit:cover;object-position:50% 50%;animation:scene-ambient var(--scene-drift-duration) cubic-bezier(.77,0,.175,1) infinite alternate;animation-play-state:paused;will-change:transform}
+.scene-backdrop::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(var(--scene-tint),.96) 0%,rgba(var(--scene-tint),.91) 46%,rgba(var(--scene-tint),.69) 100%),linear-gradient(180deg,rgba(var(--scene-tint),.2),transparent 38%,rgba(var(--scene-tint),.62));}
+.scene-backdrop::after{content:'';position:absolute;inset:0;z-index:2;background:url('assets/film-grain.png') repeat;background-size:400px 400px;opacity:.55}
+.is-scene-active .scene-backdrop>img{animation-play-state:running}
+.theatre-sheet>.scene-backdrop{--scene-tint:34,30,31;--scene-drift-duration:28s}
+.nineteen-sheet>.scene-backdrop{--scene-tint:22,41,35;--scene-drift-duration:30s}
+.hosting-sheet>.scene-backdrop{--scene-tint:92,18,20;--scene-drift-duration:28s}
+.theatre-sheet>.scene-backdrop::before,.nineteen-sheet>.scene-backdrop::before,.hosting-sheet>.scene-backdrop::before{background:linear-gradient(90deg,rgba(var(--scene-tint),.94),rgba(var(--scene-tint),.86) 48%,rgba(var(--scene-tint),.60)),linear-gradient(180deg,#0004,transparent 42%,#0008)}
+.screening-sheet>.scene-backdrop>img{object-position:50% 62%;animation-direction:alternate-reverse}
+.craft-sheet>.scene-backdrop>img{object-position:40% 55%;animation-delay:-5s}
+.hosting-sheet>.scene-backdrop>img{object-position:50% 50%;animation-direction:alternate-reverse}
+@keyframes scene-ambient{from{transform:translate3d(-.6%,-.8%,0) scale(1)}to{transform:translate3d(.6%,.8%,0) scale(1.025)}}
+@media(max-width:760px){
+ .scene-backdrop::before{background:linear-gradient(180deg,rgba(var(--scene-tint),.95) 0%,rgba(var(--scene-tint),.92) 65%,rgba(var(--scene-tint),.72)),linear-gradient(90deg,rgba(var(--scene-tint),.22),transparent)}
+ .theatre-sheet>.scene-backdrop::before,.nineteen-sheet>.scene-backdrop::before,.hosting-sheet>.scene-backdrop::before{background:linear-gradient(180deg,rgba(var(--scene-tint),.94) 0%,rgba(var(--scene-tint),.89) 65%,rgba(var(--scene-tint),.65)),linear-gradient(#0002,#0005)}
+}
+@media(prefers-reduced-motion:reduce){.scene-backdrop>img{animation:none!important;transform:none!important}.scene-backdrop::after{opacity:.55!important}}
+
+/* V21: dark Starlight introduction, continuous with the opening. */
+.starlight-sheet{background:var(--onyx);color:var(--paper)}
+.starlight-sheet>.scene-backdrop{--scene-tint:34,30,31}
+.starlight-sheet>.scene-backdrop::before{background:linear-gradient(90deg,rgba(var(--scene-tint),.95),rgba(var(--scene-tint),.87) 48%,rgba(var(--scene-tint),.64)),linear-gradient(180deg,#0004,transparent 42%,#0008)}
+.starlight-sheet .photo-outline{border-color:#ffe49f55}
+.starlight-sheet .photo-outline-second{border-color:#ffe49f2e}
+.starlight-sheet .small-theatre{border-color:var(--onyx)}
+@media(max-width:760px){.starlight-sheet>.scene-backdrop::before{background:linear-gradient(180deg,rgba(var(--scene-tint),.95),rgba(var(--scene-tint),.92) 65%,rgba(var(--scene-tint),.68)),linear-gradient(#0002,#0005)}}

@@ -1,0 +1,41 @@
+/* V9: user-directed four-photo opening. Original PNG alpha is preserved. */
+.cover-sheet{background:#100e0d}
+.cover-backdrop{position:absolute;inset:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));z-index:0;overflow:hidden}
+.cover-column{position:relative;min-width:0;height:100%;overflow:hidden;box-shadow:inset 0 0 60px #0008}
+.cover-column+.cover-column{border-left:1px solid #ffe49f19}
+.cover-column img{width:100%;height:112%;position:absolute;top:-6%;object-fit:cover;object-position:45% 50%;animation:cover-drift 18s linear infinite alternate;animation-delay:-4s;animation-play-state:paused;will-change:transform}
+.cover-column:nth-child(2) img{object-position:53% 50%;animation-duration:20s;animation-delay:-8s;animation-direction:alternate-reverse}
+.cover-column:nth-child(3) img{object-position:49% 50%;animation-duration:17s;animation-delay:-12s}
+.cover-column:nth-child(4) img{object-position:57% 50%;animation-duration:19s;animation-delay:-2s;animation-direction:alternate-reverse}
+.is-cover-active .cover-column img{animation-play-state:running}
+.cover-column::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#0004,transparent 18%,transparent 82%,#0006);pointer-events:none}
+.cover-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,#100b0b70 0%,#160b0e25 25%,#170a0d45 70%,#100a0be0 100%),radial-gradient(ellipse 43% 75% at 50% 51%,#180b10dc 0%,#180b10a3 42%,#140b103d 85%,transparent 100%);pointer-events:none}
+.cover-grain{position:absolute;inset:0;z-index:2;background:url('assets/film-grain.png') repeat;background-size:400px 400px;opacity:.55;pointer-events:none}
+.cover-lockup{position:absolute;inset:0;z-index:3;text-align:center;color:var(--gold);--cover-ease:cubic-bezier(.77,0,.175,1);text-shadow:0 2px 16px #000b}
+.cover-sheet{--cover-ease:cubic-bezier(.77,0,.175,1)}
+.cover-accessible-title{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important}
+.cover-logo-starlight{position:absolute;top:19%;left:50%;width:clamp(280px,23vw,460px);height:auto;aspect-ratio:2048/682;transform:translateX(-50%);object-fit:contain;filter:drop-shadow(0 4px 18px #0008)}
+.cover-tagline{position:absolute;top:35.5%;left:8%;width:84%;font-size:clamp(17px,1.18vw,25px);font-weight:400;line-height:1.26;letter-spacing:.01em}
+.cover-tagline>span{display:block}
+.cover-amp{position:absolute;top:47.5%;left:0;width:100%;font-size:clamp(30px,2vw,40px);line-height:1;font-weight:300;color:var(--paper)}
+.cover-logo-1927{position:absolute;top:58%;left:50%;height:21%;width:auto;aspect-ratio:971/1619;transform:translateX(-50%);object-fit:contain;filter:drop-shadow(0 4px 18px #0008)}
+.cover-house-copy{position:absolute;top:80%;left:8%;width:84%;font-size:clamp(17px,1.18vw,25px);line-height:1.35;font-weight:400;letter-spacing:.005em}
+.cover-house-copy p{line-height:inherit}
+.cover-lockup>img,.cover-amp{animation:cover-reveal 1200ms cubic-bezier(.23,1,.32,1) both}
+.cover-amp{animation-delay:80ms}.cover-logo-1927{animation-delay:160ms!important}
+@keyframes cover-reveal{from{opacity:0}to{opacity:1}}
+@keyframes cover-drift{from{transform:translate3d(-.6%,-3%,0) scale(1.025)}to{transform:translate3d(.6%,3%,0) scale(1.07)}}
+@media(max-width:760px){
+ .cover-logo-starlight{top:16%;width:72%;min-width:0;max-width:360px}
+ .cover-tagline{top:33%;font-size:17px;left:6%;width:84%;}
+ .cover-amp{top:45%;font-size:31px;left:0;width:96%}
+ .cover-logo-1927{top:55%;height:20%;left:48%}
+ .cover-house-copy{top:79%;font-size:16px;left:8%;width:78%;text-wrap:balance}
+ .cover-scrim{background:linear-gradient(180deg,#100b0b77,#170a0d44 20%,#170a0d77 60%,#100a0be6),radial-gradient(ellipse 75% 70% at 48% 50%,#180b10bb,transparent)}
+ .cover-column:first-child img{object-position:37% 50%}.cover-column:nth-child(4) img{object-position:66% 50%}
+}
+@media(prefers-reduced-motion:reduce){
+ .cover-column img,.cover-lockup>img,.cover-amp,.cover-house-copy{animation:none!important}
+ .cover-logo-starlight,.cover-logo-1927{transform:translateX(-50%)!important}
+ .cover-grain{opacity:.55!important}
+}

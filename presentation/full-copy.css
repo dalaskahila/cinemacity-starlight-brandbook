@@ -1,0 +1,85 @@
+/* Complete source text, source-highlight emphasis and presenter-readable pacing. */
+.presentation-bullets{margin:24px 0 0;padding:0 0 0 21px;list-style:disc;font-size:clamp(18px,1.43vw,22px);line-height:1.42;font-weight:300}
+.presentation-bullets>li{padding-left:5px;margin:0 0 15px;line-height:inherit;font-weight:300}
+.presentation-bullets>li::marker{font-size:.65em;color:currentColor}
+.presentation-bullets .slide-lead{font-size:1.04em;font-style:italic;line-height:1.35;margin-bottom:26px;opacity:1}
+.presentation-bullets strong{font-weight:700;font-style:normal}
+.presentation-bullets a{color:inherit;text-decoration:none;text-underline-offset:4px}.presentation-bullets a:hover{text-decoration:underline}
+.editorial-copy{top:9%;width:46%;max-width:680px}.editorial-copy h2{font-size:clamp(34px,3.1vw,46px);line-height:1.12;letter-spacing:-.025em}
+.photo-composition{left:60%;right:7%;top:18%;bottom:13%}.small-theatre{left:-16%;right:36%;height:28%}
+.theatre-facts{left:var(--gutter);top:24%;bottom:auto;display:block;width:47%;max-width:700px;padding:25px 30px;background:#5c1214ed;border:1px solid #ffe49f35;box-shadow:none}
+.theatre-facts .presentation-bullets{margin:0;font-size:clamp(17px,1.3vw,20px)}.theatre-facts .presentation-bullets>li{margin-bottom:14px}.theatre-facts .presentation-bullets>li:last-child{margin-bottom:0}
+.screening-copy{top:9%;width:45%;max-width:670px}.screening h2{max-width:none}.screening-gallery{left:58%;right:7%;top:17%;bottom:14%;border-radius:200px 200px 14px 14px}.gallery-track{left:58%;right:7%;bottom:10%}
+.nineteen-copy{position:absolute;left:var(--gutter);top:8%;width:46%;max-width:700px}.nineteen h2{position:relative;left:auto;top:auto;font-size:52px;line-height:1.05}.nineteen-copy .presentation-bullets{font-size:clamp(18px,1.4vw,21px)}
+.club-visuals{position:absolute;left:59%;right:7%;top:17%;bottom:14%}.club-beat{inset:0;min-height:0;margin:0}.club-rooms{display:grid;grid-template-columns:1fr;grid-template-rows:52% 44%;gap:4%;height:100%}.vault-card{overflow:hidden;border-radius:160px 160px 10px 10px}.vault-card img{height:100%;border-radius:0}.paired-rooms{height:100%;gap:15px}.paired-rooms figure{border-radius:90px 90px 10px 10px}.club-dining{display:block}.lounge-photo{inset:0;border-radius:180px 180px 12px 12px}.lounge-frame{inset:-2%;border-radius:200px 200px 20px 20px}.club-private{display:block}.private-photo{width:100%;height:100%;border-radius:180px 180px 12px 12px}.club-route{left:59%;bottom:6%}
+.craft-copy{top:9%;width:47%;max-width:700px}.craft h2{font-size:clamp(32px,3vw,44px);max-width:650px}.technical-list{margin-top:24px;max-width:none}.craft-photo{left:61%;right:8%;top:20%;bottom:17%}
+.hosting-copy{top:9%;width:54%;max-width:780px}.hosting h2{margin-bottom:0}.hosting-copy .presentation-bullets{font-size:clamp(17px,1.35vw,20px)}.contacts{padding-top:0;border:0}.hosting-photos{left:69%;right:7%;top:19%;bottom:15%}
+.cover-type{top:4%}.cover-type h1{font-size:clamp(36px,3.2vw,48px)}.cover-summary{position:absolute;left:15%;top:17%;width:70%;margin:0;padding:0;list-style-position:inside;text-align:center;font-size:16px;line-height:1.35}.cover-summary>li{margin-bottom:8px;padding:0}.cover-summary .slide-lead{font-size:20px;margin-bottom:8px}.cover-photo{top:35%;bottom:32%}.cover-rule{top:33.5%;bottom:30.5%}.cover-detail{top:72%;height:23%}.cover-rule-second{top:70.5%;bottom:3.5%}
+@media(min-width:1800px){.presentation-bullets{font-size:24px;line-height:1.5}.presentation-bullets>li{margin-bottom:19px}.theatre-facts .presentation-bullets,.nineteen-copy .presentation-bullets,.hosting-copy .presentation-bullets{font-size:23px}.cover-summary{font-size:19px}}
+@media(max-width:760px){
+ .presentation-bullets{font-size:16px;line-height:1.33;padding-left:16px;margin-top:18px}.presentation-bullets>li{padding-left:3px;margin-bottom:11px}.presentation-bullets .slide-lead{font-size:17px;margin-bottom:18px}
+ .editorial-copy,.screening-copy,.craft-copy,.nineteen-copy,.hosting-copy{left:25px;top:6%;width:calc(100% - 72px);max-width:none}
+ .editorial-copy h2,.screening h2,.craft h2,.hosting h2{font-size:30px;line-height:1.12}.nineteen h2{font-size:42px}
+ .photo-composition{left:47%;right:18%;top:76%;bottom:5%}.small-theatre{height:43%;left:-40%;right:42%;bottom:-1%;border-width:4px}
+ .screening-gallery{left:25px;right:45px;top:74%;bottom:6%;border-radius:75px 75px 8px 8px}.screening-rail figure{border-radius:75px 75px 8px 8px}.gallery-track{left:25px;right:45px;bottom:4%}
+ .theatre h2{top:6%;font-size:32px}.theatre-facts{left:20px;right:45px;top:23%;width:auto;padding:20px 18px;max-width:none}.theatre-facts .presentation-bullets{font-size:15px;line-height:1.35}.theatre-facts .presentation-bullets>li{margin-bottom:12px}
+ .nineteen-copy .presentation-bullets{font-size:15.5px;line-height:1.33}.club-visuals{left:25px;right:45px;top:75%;bottom:7%}.club-beat{inset:0;display:block}.club-rooms{display:grid;grid-template-columns:1fr 2fr;grid-template-rows:1fr;gap:12px;height:100%}.vault-card{display:block;border-radius:60px 60px 8px 8px}.paired-rooms{gap:10px}.paired-rooms figure{border-radius:60px 60px 8px 8px}.lounge-photo{inset:0;border-radius:60px 60px 8px 8px}.lounge-frame{inset:-3%;border-radius:70px 70px 12px 12px}.private-photo{height:100%;width:100%;border-radius:60px 60px 8px 8px}.club-route{left:25px;bottom:2%}
+ .craft-photo{left:47%;right:20%;top:75%;bottom:7%}.craft-emblem{height:42px;width:29px;left:calc(50% - 14px);bottom:-14px;padding:6px}
+ .hosting-copy .presentation-bullets{font-size:15px;line-height:1.35}.hosting-photos{left:61%;right:17%;top:80%;bottom:6%}.contacts{margin-top:18px}
+ .cover-type{top:7%}.cover-type h1{font-size:30px}.cover-summary{left:12%;top:20%;width:76%;font-size:13px;line-height:1.35}.cover-summary .slide-lead{font-size:17px;margin-bottom:10px}.cover-photo{top:40%;bottom:auto;height:auto}.cover-rule{top:38.8%;bottom:auto}.cover-detail{top:62%;height:auto;width:70%;left:15%;aspect-ratio:7008/4472}.cover-rule-second{top:60.8%;left:13.5%;right:13.5%;height:auto;bottom:auto}.cover-hairline{bottom:6%}
+}
+@media(max-height:740px) and (min-width:761px){.presentation-bullets{font-size:17px;line-height:1.3}.presentation-bullets>li{margin-bottom:10px}.presentation-bullets .slide-lead{margin-bottom:17px}.theatre-facts{top:24%;padding:18px 22px}.theatre-facts .presentation-bullets{font-size:16px}.nineteen-copy .presentation-bullets,.hosting-copy .presentation-bullets{font-size:17px}.cover-summary{top:19%;font-size:14px}.cover-summary .slide-lead{font-size:17px}.cover-photo{top:38%;bottom:31%}.cover-rule{top:36.5%;bottom:29.5%}.cover-detail{top:74%;height:21%}.cover-rule-second{top:72.5%;bottom:3.5%}}
+@media(prefers-reduced-motion:reduce){.nineteen{height:100svh!important;min-height:660px}.nineteen>.sc-stage{height:100svh!important;min-height:660px}.nineteen-sheet{position:absolute;padding:0;overflow:hidden}.nineteen h2{margin:0}.club-visuals{display:flex;gap:14px;overflow:auto}.club-beat{position:relative;inset:auto;flex:0 0 100%;height:100%;min-height:0;visibility:visible!important;margin:0}.club-route{display:none}}
+
+/* V13: more breathing room between section headings and their copy. */
+.editorial-copy>.presentation-bullets,.screening-copy>.presentation-bullets,.nineteen-copy>.presentation-bullets,.craft-copy>.presentation-bullets,.hosting-copy>.presentation-bullets{margin-top:48px}
+.theatre-facts{top:calc(24% + 24px)}
+@media(max-height:740px) and (min-width:761px){
+ .editorial-copy>.presentation-bullets,.screening-copy>.presentation-bullets,.nineteen-copy>.presentation-bullets,.craft-copy>.presentation-bullets,.hosting-copy>.presentation-bullets{margin-top:36px}
+ .theatre-facts{top:calc(24% + 12px)}
+}
+@media(max-width:760px){
+ .editorial-copy>.presentation-bullets,.screening-copy>.presentation-bullets,.nineteen-copy>.presentation-bullets,.craft-copy>.presentation-bullets,.hosting-copy>.presentation-bullets{margin-top:32px}
+ .theatre-facts{top:calc(23% + 14px)}
+}
+
+/* V17: theatre title centered at the user-marked upper photo position. */
+.theatre h2{left:7%;right:7%;top:17%;max-width:none;text-align:center}
+@media(max-width:760px){.theatre h2{left:25px;right:25px;top:12%;max-width:none}}
+
+/* V18: center the body copy independently of each section heading. */
+.editorial-copy,.screening-copy,.nineteen-copy,.craft-copy,.hosting-copy{top:0;height:100%}
+.editorial-copy>h2,.screening-copy>h2,.craft-copy>h2,.hosting-copy>h2{position:absolute;top:9%;left:0;right:0}
+.nineteen-copy>h2{position:absolute;top:8%;left:0;right:0}
+.editorial-copy>.presentation-bullets,.screening-copy>.presentation-bullets,.nineteen-copy>.presentation-bullets,.craft-copy>.presentation-bullets,.hosting-copy>.presentation-bullets{position:absolute;top:50%;left:0;right:0;margin:0;translate:0 -50%}
+.presentation-bullets>li:last-child{margin-bottom:0}
+.theatre-facts{top:50%;translate:0 -50%}
+@media(max-width:760px){
+ .editorial-copy>h2,.screening-copy>h2,.nineteen-copy>h2,.craft-copy>h2,.hosting-copy>h2{top:6%}
+}
+
+/* V19: keep the lounge faces within the existing small photo frame. */
+.starlight .small-theatre img{object-position:50% 55%}
+
+/* V20: rounded, burgundy-tinted frosted glass for the theatre facts. */
+.theatre-facts{
+ border-radius:28px;
+ background:rgba(70,20,24,.88);
+ border:1px solid rgba(255,228,159,.28);
+ box-shadow:inset 0 1px 0 rgba(255,245,221,.12),0 16px 44px rgba(12,5,8,.20);
+}
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+ .theatre-facts{
+  background:linear-gradient(135deg,rgba(110,32,35,.38),rgba(44,18,24,.52));
+  -webkit-backdrop-filter:blur(22px) saturate(.85);
+  backdrop-filter:blur(22px) saturate(.85);
+ }
+}
+@media(max-width:760px){.theatre-facts{border-radius:22px}}
+
+/* V22: selected introductory lines read as bold leads without bullet markers. */
+#starlight .presentation-bullets>.slide-lead,
+#screening .presentation-bullets>.slide-lead,
+#nineteen .presentation-bullets>.slide-lead,
+#craft .presentation-bullets>.slide-lead,
+#hosting .presentation-bullets>.slide-lead{list-style:none;font-weight:700;font-style:normal}

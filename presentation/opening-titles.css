@@ -1,0 +1,10 @@
+/* Opening Sequence: perspective letters, dispersed blur, focus, then held reading.
+   Reference: Codrops / Manoela Ilic, 2013-04-30. Original typography is retained. */
+.opening-heading .opening-word{display:inline-block;white-space:nowrap;transform-origin:50% 50%}
+.opening-heading .opening-letter{display:inline-block;perspective:1000px;transform-origin:50% 50%;font:inherit;letter-spacing:inherit}
+.opening-heading .opening-glyph{display:inline-block;transform-style:preserve-3d;transform-origin:50% 50%;font:inherit;letter-spacing:inherit}
+.cover-type h1 .opening-word,.cover-type h1 .opening-letter,.cover-type h1 .opening-glyph{display:inline-block}
+.opening-heading[data-opening-state="waiting"] .opening-glyph{opacity:0}
+@media(prefers-reduced-motion:reduce){
+ .opening-heading .opening-word,.opening-heading .opening-letter,.opening-heading .opening-glyph{opacity:1!important;transform:none!important;filter:none!important;animation:none!important}
+}
