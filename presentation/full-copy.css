@@ -83,3 +83,13 @@
 #nineteen .presentation-bullets>.slide-lead,
 #craft .presentation-bullets>.slide-lead,
 #hosting .presentation-bullets>.slide-lead{list-style:none;font-weight:700;font-style:normal}
+
+/* V23: wider landscape window reveals more of the existing stage photograph. */
+.craft-photo{left:56%;right:5%;top:28%;bottom:26%}
+.craft-photo figure{border-radius:170px 170px 16px 16px}
+.craft-photo figure img{object-position:50% 50%}
+.craft-lines{inset:-8% -5%}
+@media(max-width:760px){
+ .craft-photo{left:12%;right:18%;top:76%;bottom:5%}
+ .craft-photo figure{border-radius:75px 75px 10px 10px}
+}
