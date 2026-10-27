@@ -1,0 +1,25 @@
+/* V26: visible continuous drift, including the first seconds after arrival. */
+.folio{--presenter-ease:cubic-bezier(.77,0,.175,1)}
+.tall-photo img,.small-theatre img,.theatre-photo img,.club-beat img,.craft-photo figure img,.hosting-lobby img,.hosting-private img{
+ animation:presenter-photo 10s linear infinite alternate;
+ animation-play-state:paused;will-change:transform;
+}
+.is-scene-active .tall-photo img,.is-scene-active .small-theatre img,.is-scene-active .theatre-photo img,.is-scene-active .club-beat[aria-hidden=false] img,.is-scene-active .craft-photo figure img,.is-scene-active .hosting-lobby img,.is-scene-active .hosting-private img{animation-play-state:running}
+.small-theatre img,.hosting-private img{animation-direction:alternate-reverse;animation-duration:12s}
+.theatre-photo img{animation-duration:14s}
+.club-beat img{animation-duration:10s}
+.photo-outline,.photo-outline-second,.craft-lines i,.hosting-line{animation:presenter-outline 10s linear infinite alternate;animation-play-state:paused}
+.is-scene-active .photo-outline,.is-scene-active .photo-outline-second,.is-scene-active .craft-lines i,.is-scene-active .hosting-line{animation-play-state:running}
+.photo-outline-second,.craft-lines i:nth-child(2){animation-direction:alternate-reverse}
+.small-theatre,.hosting-private{animation:presenter-float 10s linear infinite alternate;animation-play-state:paused}
+.is-scene-active .small-theatre,.is-scene-active .hosting-private{animation-play-state:running}
+.hosting-private{animation-direction:alternate-reverse}
+.club-beat{transition:opacity 500ms cubic-bezier(.23,1,.32,1),visibility 500ms;}
+@keyframes presenter-photo{from{transform:translate3d(-.8%,-1%,0) scale(1.025)}to{transform:translate3d(.8%,1%,0) scale(1.10)}}
+@keyframes presenter-outline{from{transform:scale(1) rotate(-.5deg)}to{transform:scale(1.07) rotate(.5deg)}}
+@keyframes presenter-float{from{transform:translate3d(0,0,0) rotate(0deg)}to{transform:translate3d(-12px,-22px,0) rotate(-1.5deg)}}
+@media(prefers-reduced-motion:reduce){
+ .tall-photo img,.small-theatre img,.theatre-photo img,.club-beat img,.craft-photo figure img,.hosting-lobby img,.hosting-private img,.photo-outline,.photo-outline-second,.craft-lines i,.hosting-line{animation:none!important;transform:none!important}
+ .small-theatre,.hosting-private{animation:none!important;transform:none!important}.club-beat{transition:none}
+}
+
