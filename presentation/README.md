@@ -1,6 +1,6 @@
 # Cinemacity Starlight & 1927
 
-Animated presentation, version 23.
+Animated presentation, version 24.
 
 [View the presentation](https://dalaskahila.github.io/cinemacity-starlight-brandbook/presentation/)
 

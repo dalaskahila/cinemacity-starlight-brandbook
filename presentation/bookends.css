@@ -1,0 +1,16 @@
+/* V24 local review: selected concept 05, original DCT PNG, existing grain. */
+.welcome{z-index:8}.thank-you{z-index:0}
+.bookend-sheet{background:#5c1214;color:#fff;--bookend-ease:cubic-bezier(.77,0,.175,1)}
+.bookend-art{position:absolute;inset:0;overflow:hidden;z-index:0}
+.bookend-art img{width:100%;height:100%;object-fit:cover;transform:scale(1.025);animation:bookend-drift 26s var(--bookend-ease) infinite alternate;animation-play-state:paused;will-change:transform}
+.is-scene-active .bookend-art img{animation-play-state:running}
+.thank-you .bookend-art img{animation-direction:alternate-reverse}
+.bookend-lockup{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(26px,4vh,48px);padding:7vh 12vw;text-align:center}
+.bookend-lockup h2{font-size:clamp(36px,3.3vw,52px);font-weight:400;line-height:1.15;letter-spacing:-.02em;text-shadow:0 2px 14px #28080855}
+.dct-welcome-logo{height:min(33vh,350px);width:auto;max-width:40vw;object-fit:contain;filter:drop-shadow(0 2px 8px #28080833)}
+.thank-you .bookend-lockup h2{font-size:clamp(40px,4vw,62px)}
+/* Preserve the logo's center while reducing both dimensions by exactly 15%. */
+.cover-logo-1927{height:17.85%;top:59.575%}
+@keyframes bookend-drift{from{transform:translate3d(-.35%,-.25%,0) scale(1.025)}to{transform:translate3d(.35%,.25%,0) scale(1.045)}}
+@media(max-width:760px){.bookend-lockup{padding:8vh 13vw 8vh 8vw;gap:32px}.dct-welcome-logo{max-width:65vw;height:auto;max-height:34svh}.bookend-lockup h2{font-size:36px}.cover-logo-1927{height:17%;top:56.5%}}
+@media(prefers-reduced-motion:reduce){.bookend-art img{animation:none!important;transform:none!important}}
