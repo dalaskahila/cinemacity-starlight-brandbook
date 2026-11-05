@@ -15,7 +15,8 @@
     const original=heading.textContent;
     const walker=document.createTreeWalker(heading,NodeFilter.SHOW_TEXT);
     const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
-    const letters=[],words=[];
+    const graphics=[...heading.querySelectorAll('[data-opening-graphic]')];
+    const letters=graphics.map(glyph=>({glyph,spread:0})),words=[...graphics];
     for(const node of nodes){
       const frag=document.createDocumentFragment();
       for(const token of node.textContent.split(/(\s+)/)){

@@ -22,3 +22,13 @@ footer{position:absolute;bottom:4%;left:6.2%;right:7.5%;display:flex;justify-con
 /* V3: user-supplied Quintessentially symbol, unchanged transparent PNG. */
 .welcome-partner{display:flex;align-items:center;justify-content:center;gap:.35em}.partner-logo{width:1.18em;height:1.18em;object-fit:contain;flex:none}.welcome-partner>span{white-space:nowrap}
 @media(max-width:700px){.welcome-lockup h1{font-size:29px}.welcome-word{font-size:.74em}.welcome-partner{gap:.25em}.partner-logo{width:1.12em;height:1.12em}}
+
+/* V4: stacked welcome, top 1927 mark at exactly 60% of V3 dimensions. */
+.welcome-lockup{inset:13% 10% 13%;justify-content:flex-start}
+.seal.welcome-gold{height:clamp(108px,17.4svh,180px);margin-bottom:5svh;flex:none}
+.welcome-word{margin-bottom:2.5svh}
+.welcome-partner{flex-direction:column;gap:2.3svh;perspective:1000px}
+.partner-logo{width:clamp(68px,8svh,94px);height:clamp(68px,8svh,94px);transform-style:preserve-3d}
+.welcome-sub{margin-top:4svh}
+@media(max-width:700px){.welcome-lockup{inset:12% 9% 15%}.seal.welcome-gold{height:15svh;margin-bottom:4svh}.welcome-word{margin-bottom:2svh}.welcome-partner{gap:2svh}.partner-logo{width:58px;height:58px}.welcome-sub{margin-top:3.5svh}}
+@media(max-height:700px) and (min-width:701px){.welcome-lockup{top:9%}.seal.welcome-gold{margin-bottom:2svh}.welcome-word{margin-bottom:1.5svh}.welcome-partner{gap:1.5svh}.partner-logo{width:48px;height:48px}.welcome-sub{margin-top:2.5svh}}
